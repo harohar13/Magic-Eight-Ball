@@ -1,0 +1,109 @@
+font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+"Lucida Sans", Arial, sans-serif;
+}
+
+body {
+background-color: #012248;
+display: grid;
+place-content: center;
+}
+
+#question {
+margin-top: 10vw;
+width: 320px;
+border-radius: 1.6rem;
+padding: 1.6rem 0.8rem;
+border: none;
+outline: none;
+background-color: #f1f1f1;
+color: #1f1f1f;
+}
+
+#ask {
+margin: 1.6rem 0;
+width: 320px;
+border-radius: 1.6rem;
+padding: 1.6rem 0.8rem;
+border: none;
+outline: none;
+cursor: pointer;
+background-color: #f1f1f1;
+color: #1f1f1f;
+}
+
+#ball {
+width: 100%;
+aspect-ratio: 1/1;
+border-radius: 50%;
+background-color: #000;
+background-image: radial-gradient(rgba(255, 255, 255, 0.1), transparent);
+box-shadow: 0.8rem 0.8rem 0.8rem #000,
+inset 0.8rem 0.8rem 0.8rem 0.8rem rgba(255, 255, 255, 0.1);
+position: relative;
+}
+
+#ball.shake {
+animation: shake 1s ease-in-out forwards;
+}
+
+@keyframes shake {
+0%,
+100% {
+transform: translate(0, 0);
+}
+10% {
+transform: translate(-10%, 0);
+}
+20% {
+transform: translate(10%, 0);
+}
+30% {
+transform: translate(-5%, 0);
+}
+40% {
+transform: translate(5%, 0);
+}
+50% {
+transform: translate(-2.5%, 0);
+}
+60% {
+transform: translate(2.5%, 0);
+}
+70% {
+transform: translate(-1.25%, 0);
+}
+80% {
+transform: translate(1.25%, 0);
+}
+90% {
+transform: translate(0, 0);
+}
+}
+
+#answer {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+border: 1px solid #fff;
+width: 50%;
+aspect-ratio: 1/1;
+box-shadow: 0 0 0.8rem #000;
+color: rgba(251, 251, 251, 0);
+text-align: center;
+padding-top: 22.5%;
+}
+
+#answer.answered {
+animation: answer 1s linear forwards;
+}
+
+@keyframes answer {
+from {
+color: rgba(251, 251, 251, 0);
+}
+to {
+color: rgba(251, 251, 251, 1);
+}
+}
